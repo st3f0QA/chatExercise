@@ -1,0 +1,31 @@
+{
+  "name": "ai-chat-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"node --watch app/server/index.mjs\" \"vite --config app/vite.config.ts\"",
+    "build": "tsc --noEmit -p app/tsconfig.json && vite --config app/vite.config.ts build",
+    "start": "node app/server/index.mjs",
+    "test:e2e": "playwright test --config e2e/playwright.config.ts"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/express-session": "^1.18.2",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5"
+  }
+}

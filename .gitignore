@@ -1,0 +1,6 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+app/server/data/chat-data.json
+app/server/data/chat-data.json.tmp
